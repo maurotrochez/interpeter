@@ -7,6 +7,7 @@ COMPARADOR = 'COMPARADOR'
 STRING = 'STRING'
 INT = 'INT'
 ID = 'ID'
+TIPO_VAR = 'TIPO_VARIABLE'
 
 token_exprs = [
     # Espacios en blanco

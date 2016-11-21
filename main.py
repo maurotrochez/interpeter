@@ -8,7 +8,9 @@ if __name__ == '__main__':
     contenido = file.read()
     file.close()
     tokens = imp_lex(contenido)
+    print(tokens)
     validar_bloques(tokens)
     clase = validar_clase(tokens)
+    expresiones(tokens)
 
 

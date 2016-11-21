@@ -30,12 +30,32 @@ def validar_clase(tokens):
         if lex == 'class':
             if id == 'ID':
                 if begin == 'begin':
-                    return "{lex} {id} {begin}\n\t".format(lex=lex, id=id, begin=':')
+                    return "{lex} {id} {begin} \n\t".format(lex=lex, id=id, begin=':')
         error('Error en estructura de clase')
 
 
 def expresiones(tokens):
-    pos = 3
+    tokens = tokens[3:]
+    st = stament(tokens)
+
+
+def stament(tokens):
+    str = ''
+    for lex, token in tokens:
+        if token == 'RESERVADO':
+            str += '' if tipo_var(lex) else lex
+        if token == 'ID':
+            str += lex
+        if lex == ';':
+            str += "\n"
+    print(str)
+
+
+def tipo_var(str):
+    variables = ('int', 'decimal', 'char', 'string', 'boolean')
+    return any(v for v in variables if v == str)
+
+
 
 
 
