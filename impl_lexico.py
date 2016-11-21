@@ -8,6 +8,8 @@ STRING = 'STRING'
 INT = 'INT'
 ID = 'ID'
 TIPO_VAR = 'TIPO_VARIABLE'
+INICIO_BLOQUE = 'INICIO_BLOQUE'
+FIN_BLOQUE = 'FIN_BLOQUE'
 
 token_exprs = [
     # Espacios en blanco
@@ -31,16 +33,17 @@ token_exprs = [
     (r'or',                    RESERVADO),
     (r'not',                   RESERVADO),
     (r'if',                    RESERVADO),
-    (r'begin',                 RESERVADO),
+    (r'begin',                 INICIO_BLOQUE),
     (r'else',                  RESERVADO),
     (r'for',                   RESERVADO),
-    (r'end',                   RESERVADO),
+    (r'end',                   FIN_BLOQUE),
     (r'main\(\)',              RESERVADO),
     (r'int',                   RESERVADO),
     (r'decimal',               RESERVADO),
     (r'char',                  RESERVADO),
     (r'string',                RESERVADO),
     (r'boolean',               RESERVADO),
+    (r'void',                  RESERVADO),
     (r'class',                 RESERVADO),
     (r'in',                    RESERVADO),
     (r'out',                   RESERVADO),

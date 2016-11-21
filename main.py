@@ -11,6 +11,7 @@ if __name__ == '__main__':
     print(tokens)
     validar_bloques(tokens)
     clase = validar_clase(tokens)
+    print(clase)
     expresiones(tokens)
 
 
